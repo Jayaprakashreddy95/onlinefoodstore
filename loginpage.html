@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Login Here </title>
+<link rel="icon" href="images\icon.jpg" type="image\jpg">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Information about Groceries ">
+<meta name="keywords" content=" bakery, sof drinks, meat, candies, dairy">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="CSS/login.css">
+</head>
+<body>
+	
+<div class="header">
+<img src="images/icon.jpg" alt="logo" />
+
+<h1><center>Online Grocery Store</center><h1>
+</div>
+<hr>
+<!---------nav-------->
+<nav>
+            <div>
+                  <i class="fa fa-bars"></i>
+            </div>
+
+            <ul>
+                  <li><a href="onlinegs.html">Home</a></li>
+                  <li><a href="vegetables.html">Vegetables</a></li>
+                  <li><a href="#">Meat & Seafood<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                              <li><a href="meat.html">Meat</a></li>
+                              
+                              <li><a href="fish.html">Seafood</a></li>                       
+                        </ul>
+                  </li>
+                  <li><a href="#">Bakery<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                              <li><a href="softdrinks.html">Softdrinks</a></li>
+                              <li><a href="Bakery.html">Cakes</a></li>
+                              <li><a href="puffs.html">Puffs</a></li>
+                            
+                              
+                              
+                        </ul>
+                  </li>
+                  <li><a href="candies.html">Candies</a></li>
+                 <li><a href="faqs.html">FAQ's</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                   
+                   
+                    
+          </ul>
+            
+      </nav>
+      <hr>
+       <h1><b><CENTER> LOG IN </CENTER></b></h1>
+       <hr>
+       
+ <!----login form------->
+    
+<div class="container">
+<div class="main">
+<h2>Login Here </h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>
+<span><b class="note">Note : </b><br/><b class="valid">User Name : admin<br/>Password : password</b></span>
+</div>
+</div>
+<hr>
+	
+<footer id="footer">
+
+  <p><b><u> Contact information: </u></b></p>
+
+ <p><b>Phone:</b> 123-456-7890</p>
+
+  
+<p><b>Follow Us:</b></p>
+  
+  <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.flickr.com/"><i class="fa fa-flickr"></i></a>
+  <a href="https://www.linkedin.com/uas/login"><i class="fa fa-linkedin"></i></a>
+  
+    <p><b>&copy; Copyright 2019 </b></p><br>
+  
+ </footer>
+ 
+	
+
+<script>
+/*--
+validate(){
+this.username= this.id("username").value;
+this.password= this.id("pwd").value;
+if ( username == "a@a.com" && password == "password") {
+alert ("Login Successfull!! Welcome back Admin!!");
+this.router.navigate(['/home']); // Redirecting to other page.
+return false;
+}
+}
+*/
+var attempt = 2; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "admin" && password == "password"){
+alert ("Login Successfull!! Welcome back Admin!!");
+window.location = "onlinegs.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 2 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+</script>
+</body>
+</html>

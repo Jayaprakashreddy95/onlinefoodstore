@@ -1,0 +1,250 @@
+
+*{
+	box-sizing: border-box;
+	
+}
+
+/* HEADER */
+.header {
+    padding: 10px;
+    text-align: center;
+    color: black;
+	margin-bottom: 2px;
+	text-shadow: 1px 1px;
+	background-color:#ffcc00;
+}
+
+.header h1
+{
+	font-size:50px;
+	  text-align: center;
+  top: 18px;
+  left: -50px;
+	
+}
+.header img {
+  float: left;
+  width: 100px;
+  height: 120px;
+  background: #555;
+  }
+
+  .link a
+  {
+  	font-size:15px;
+  	float: right;
+  	color: black;
+  	
+  }
+  
+#panel, #flip {
+  padding: 40px;
+  text-align: center;
+  background-color: black;
+  border: solid #ffcc00;
+color:#00ff00;
+}
+
+#panel {
+  padding: 40px;
+  display: none;
+  color:#00ff00;
+
+}
+
+#cookieAlert{
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	color: black;
+	background-color:yellow;
+	font-size: 18px;
+	text-align: center;
+	height: 40px;
+	padding: 10px;
+	line-height: 2.2;
+	
+}
+#cancelCookiesbtn{
+	width: 25px;
+	height: 25px;
+	background-color: red;
+	color: yellow;
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 30px;
+	cursor: pointer;
+}
+
+/* TOP NAV BAR */
+
+ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background: #ffcc00;
+      position: relative;
+      font-size:20px;
+}
+
+ul li {
+      display: inline-block;
+}
+
+ul li a {
+      color: #292929;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+}
+
+ul li:hover {
+      background: lightgrey;
+}
+
+ul ul {
+      position: absolute;
+      min-width: 200px;
+      background: lightgrey;
+      display: none;
+}
+
+ul ul li {
+      display: block;
+      background: #e3e3e3;
+}
+
+ul li:hover ul {
+      display: block;
+}
+
+ul li i {
+      color: #292929;
+      float: right;
+      padding-left: 20px;
+}
+
+nav div {
+      background: lightgrey;
+      color: #292929;
+      font-size: 24px;
+      padding: 0.6em;
+      cursor: pointer;
+      display: none;
+}
+
+@media(max-width: 768px) {
+      nav div {
+            display: block;
+      }
+
+      ul {
+            display: none;
+            position: static;
+            background: #e3e3e3;
+      }
+
+      ul li {
+            display: block;
+      }
+
+      ul ul {
+            position: static;
+            background: #e3e3e3;
+      }
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+  background-color: white;
+  padding: 20px;
+  font-size:18px;
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+/*image btn*/
+.container {
+  position: relative;
+width="880";
+height="250";
+}
+
+.container img {
+
+}
+
+.container .btn {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #b33c00;
+  color: #e3e3e3;
+  font-size: 20px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color:black;
+}
+
+footer  {
+	
+	position: bottom;
+    color: black;
+    text-align: center;
+	padding: 20px;
+	font-size:15px;
+	background-color:#ffcc00;
+	width: 100%;
+	}
+footer a
+	
+{
+	 color: black;
+	 padding: 10px;
+
+}
+
+
